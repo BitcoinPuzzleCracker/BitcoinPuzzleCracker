@@ -35,15 +35,12 @@ A live website is in development to display real-time scanning progress.
 
 The goal is to create a collaborative platform for puzzle-solving.
 
-Support the Developer
-If this program helps you and you’d like to appreciate the effort, you can send a tip to the developer’s Bitcoin address:
-bc1qshjmmq898m7mwceyr4qlk3vz0ptxue3yd8ux2y
-
 Current Status
 The program is fully functional and optimized for Puzzle 71.
 
 More features (like the live tracking website) are coming soon.
 
+Support the Developer
 Donations are greatly appreciated and will help improve the project!
 
 BTC: bc1qshjmmq898m7mwceyr4qlk3vz0ptxue3yd8ux2y
