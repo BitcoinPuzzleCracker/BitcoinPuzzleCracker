@@ -3,7 +3,7 @@ INPUT_FILE = "puzzle.txt"
 OUTPUT_FILE = "FOUND.txt"
 WORK_DIR = r"C:\Users\pc\Desktop\PuzzleBTC" Change these paths to your own paths
 ![image](https://github.com/user-attachments/assets/3b82ca9f-9759-4da2-affa-2fee827be174)
-
+You must install the libraries required for the Python script. Run the command, and you’ll see which libraries you need. Install them one by one. After that, you can begin. Puzzle 35 and 71 of the Python script, you still need to change the path to your own folder’s path. Good luck!
 
 This program is designed to crack Puzzle #71 by efficiently scanning and processing hexadecimal codes. Here's a clear explanation of how it works:
 
