@@ -2,7 +2,8 @@ CUDA_CRACK_PATH = r"C:\Users\pc\Desktop\PuzzleBTC\cubitcrack.exe" Change these p
 INPUT_FILE = "puzzle.txt"
 OUTPUT_FILE = "FOUND.txt"
 WORK_DIR = r"C:\Users\pc\Desktop\PuzzleBTC" Change these paths to your own paths
-![image](https://github.com/user-attachments/assets/6bcaf4fa-8f7d-4dbb-9ff8-83959a671263)
+![image](https://github.com/user-attachments/assets/3b82ca9f-9759-4da2-affa-2fee827be174)
+
 
 This program is designed to crack Puzzle #71 by efficiently scanning and processing hexadecimal codes. Here's a clear explanation of how it works:
 
