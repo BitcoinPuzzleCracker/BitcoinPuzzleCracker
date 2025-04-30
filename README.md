@@ -44,5 +44,9 @@ The program is fully functional and optimized for Puzzle 71.
 
 More features (like the live tracking website) are coming soon.
 
-Bitcoin address:
-bc1qshjmmq898m7mwceyr4qlk3vz0ptxue3yd8ux2y
+Donations are greatly appreciated and will help improve the project!
+
+BTC: bc1qshjmmq898m7mwceyr4qlk3vz0ptxue3yd8ux2y
+ETH: 0xA6BCdcD154e704f9fcEc2996A8c5ACc76C56A184
+
+If you’d like to contribute to the website and help speed up the process, your support is warmly welcome!
