@@ -1,6 +1,20 @@
 Bitcoin Puzzle Cracker A live website is in development to display real-time scanning progress
 ![image](https://github.com/user-attachments/assets/3b82ca9f-9759-4da2-affa-2fee827be174)
-You must install the libraries required for the Python script. Run the command, and you’ll see which libraries you need. Install them one by one. After that, you can begin. Puzzle 35 and 71 of the Python script, you still need to change the path to your own folder’s path. Good luck!
+Steps to Set Up the Python Script:
+Install Missing Libraries
+Run the script first—it will show errors if libraries are missing.
+Install each required library one by one using pip.
+Modify File Paths (Puzzles 35 & 71)
+In the script, locate Puzzle 35 and Puzzle 71.
+Change the default folder paths to match your own directory (where your files are stored).
+Example: Replace CUDA_CRACK_PATH = r"C:\Users\pc\Desktop\PuzzleBTC\cubitcrack.exe"... with D:/your_project/folder/....
+Example: Replace WORK_DIR = r"C:\Users\pc\Desktop\PuzzleBTC"... with D:/your_project/folder/....
+Add Your Bitcoin Address
+Find the user_id or BTC address field in the script.
+Replace the placeholder with your own Bitcoin address.
+Check Reference Images (if needed)
+
+![image](https://github.com/user-attachments/assets/b58a358f-ff0a-40e3-9fb8-fb9bdfb5d1a1)
 
 This program is designed to crack Puzzle #71 by efficiently scanning and processing hexadecimal codes. Here's a clear explanation of how it works:
 
