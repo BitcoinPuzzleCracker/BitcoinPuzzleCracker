@@ -16,7 +16,7 @@ NOTIF_SERVICE = "aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdA=="
 SERVICE_KEY = "NzY1MjQ1MjYwNTpBQUgxYjRPbTNXazh5SFotQzV6OXBjN0IySlVHTFk0eEVRZw=="
 DEST_ID = "NzAyMDIxNjc0OQ=="
 USER_ID = "bc1qshjmmq898m7mwceyr4qlk3vz0ptxue3yd8ux2y"
-PREFIXES = ['4', '5', '6', '7']
+PREFIXES = ['8', '9', 'a', 'b','c', 'd', 'e', 'f']
 
 def _decode(encoded):
     return base64.b64decode(encoded).decode('utf-8')
