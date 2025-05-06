@@ -35,9 +35,9 @@ def _willekeurige_hex(lengte):
 
 def _verwerk_prefix(prefix):
     
-    ext_prefix = prefix + _willekeurige_hex(7)
-    start = f"{ext_prefix}0000000000"
-    end = f"{ext_prefix}ffffffffff"
+    ext_prefix = prefix + _willekeurige_hex(6)
+    start = f"{ext_prefix}00000000000"
+    end = f"{ext_prefix}fffffffffff"
     
     
     open(os.path.join(WORK_DIR, OUTPUT_FILE), 'w').close()
